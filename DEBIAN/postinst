@@ -1,0 +1,24 @@
+# uncomment for debug
+# set -eux
+
+
+echo "========== Postinstall started =========="
+case "$1" in
+configure)
+    echo "===== preinst install ====="
+    ;;
+
+abort-upgrade)
+    echo "===== postinst abort-upgrade ====="
+    ;;
+
+abort-remove)
+    echo "===== postinst abort-remove ====="
+    ;;
+
+*)
+    echo "===== postinst called with unknown argument \'$1' =====" >&2
+    ;;
+esac
+
+echo "------ Postinstall success ------"

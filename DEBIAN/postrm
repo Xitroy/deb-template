@@ -1,0 +1,38 @@
+# uncomment for debug
+# set -eux
+
+
+echo "========== Postrm started =========="
+case "$1" in
+remove)
+    echo "===== postrm remove ====="
+    ;;
+
+upgrade)
+    echo "===== postrm upgrade ====="
+    ;;
+
+abort-install)
+    echo "===== postrm abort-install ====="
+    ;;
+
+failed-upgrade)
+    echo "===== postrm failed-upgrade ====="
+    exit 1
+    ;;
+
+purge)
+    echo "===== postrm purge ====="
+    ;;
+
+abort-upgrade)
+    echo "===== postrm abort-upgrade ====="
+    ;;
+
+*)
+    echo "===== postrm called with unknown argument \'$1' =====" >&2
+    exit 1
+    ;;
+esac
+
+echo "------ Postrm success ------"

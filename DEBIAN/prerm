@@ -1,0 +1,26 @@
+# uncomment for debug
+# set -eux
+
+
+echo "========== Prerm started =========="
+case "$1" in
+remove)
+    echo "===== prerm remove ====="
+    ololo
+    ;;
+
+upgrade)
+    echo "===== prerm upgrade ====="
+    ;;
+
+failed-upgrade)
+    echo "===== prerm failed-upgrade ====="
+    ;;
+
+*)
+    echo "===== prerm called with unknown argument \'$1' =====" >&2
+    exit 1
+    ;;
+esac
+
+echo "------ Prerm success ------"

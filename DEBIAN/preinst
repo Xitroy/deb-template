@@ -1,0 +1,26 @@
+# uncomment for debug
+# set -eux
+
+
+echo "========== Preinstall started =========="
+case "$1" in
+install)
+    echo "===== preinst install ====="
+    ;;
+
+upgrade)
+    echo "===== preinst upgrade ====="
+    exit 1;
+    ;;
+
+
+abort-upgrade)
+    echo "===== preinst abort upgrade ====="
+    ;;
+
+*)
+    echo "===== preinst called with unknown argument '$1' =====" >&2
+    ;;
+esac
+
+echo "------ Preinstall success ------"

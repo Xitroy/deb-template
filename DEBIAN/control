@@ -1,0 +1,5 @@
+Package: example-package
+Version: blabla
+Section: misc
+Architecture: all
+Depends: bash
